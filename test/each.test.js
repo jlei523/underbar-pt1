@@ -39,5 +39,16 @@ describe('each()', () => {
     });
     expect(count).toBe(3);
   });
+
+  it('interates through every property of a number array and adds one', () => {
+    const arr = [1,2,3,4,5];
+    let count = 0;
+    _.each(arr, function(value, index, iteratedArr) {
+      value += 1;
+      count += 1;
+      expect(value).toEqual(iteratedArr[index] + 1);
+    });
+    expect(count).toBe(5);
+  });
 });
 
