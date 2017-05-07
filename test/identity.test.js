@@ -20,4 +20,9 @@ describe('identity()', () => {
     };
     expect(_.identity(val)).toBe(val);
   });
+
+  it('returns the undefined if given undefined', () => {
+    const val = undefined;
+    expect(_.identity(val)).toBe(val);  
+  });
 });
