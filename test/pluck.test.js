@@ -11,4 +11,14 @@ describe('pluck()', () => {
     expect(result).toEqual([12, 999, 14]);
   });
 
+ it('returns an array of pets, given an array of people objects', () => {
+ 	const peopleTwo = [
+ 		{name: 'Joe', pets: ['Fishy', 'Dog']},
+ 		{name: 'Jane', pets: ['Turtle']},
+ 		{name: 'John', pets: ['Cat']}
+ 	];
+ 	const resultTwo = _.pluck(peopleTwo, 'pets');
+ 	expect(resultTwo).toEqual([['Fishy', 'Dog'],['Turtle'],['Cat']]);
+ });
+
 });
