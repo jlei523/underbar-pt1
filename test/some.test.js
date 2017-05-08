@@ -11,4 +11,13 @@ describe('some()', () => {
     expect(_.some(nums, num => num % 2 === 1)).toBe(false);
   });
 
+  it('returns true if an array contains undefined', () => {
+  	const arr = [3,4,5,,];
+  	expect(_.some(arr, element => typeof element === 'undefined')).toBe(true);
+  });
+
+  it('returns true if an array contains an object', () => {
+  	const arr = [23,23,23,{},];
+  	expect(_.some(arr, element => typeof element === 'object')).toBe(true);
+  });
 });

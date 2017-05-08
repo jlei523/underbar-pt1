@@ -17,5 +17,15 @@ describe('every()', () => {
       expect(_.every(nums, num => num % 2 === 1)).toBe(false);
     });
 
+    it('returns true if all elements in an array are strings', () => {
+      const strings = ['one', 'two', 'three'];
+      expect(_.every(strings, string => typeof string === 'string')).toBe(true);
+    });
+
+    it('returns true if every element in an array does not equal to the number 1', () => {
+      const arr = ['one', undefined, null, true];
+      expect(_.every(arr, element => element !== 1)).toBe(true);
+    });
+
   });
 });

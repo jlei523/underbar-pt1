@@ -31,4 +31,19 @@ describe('contains()', () => {
     expect(_.contains(ponies, 'Applejack')).toBe(false);
   });
 
+  it('returns true if an array-like object contains the target', () => {
+    const arrayLikeObj = {
+      '0': 'a',
+      '1': 'b', 
+      '2': 'c',
+      length:3
+    };
+    expect(_.contains(arrayLikeObj,'c')).toBe(true);
+  });
+
+  it('returns true if an array contains an undefined value', () => {
+    const arr = [1, 2, 3, 4, 5,,];
+    expect(_.contains(arr, undefined)).toBe(true);
+  });
+
 });
