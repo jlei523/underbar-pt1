@@ -14,3 +14,10 @@ describe('reduce()', () => {
   });
 
 });
+
+
+ //  it('maps every numer in an array', () => {
+ //  let arr = [2,5,'wef',,undefined, null,23];
+ //  let mappedArr = _.reduce(arr, (element)  => typeof element === "number");
+ //  expect(mappedArr).toEqual([2,5,23]);
+ // });
